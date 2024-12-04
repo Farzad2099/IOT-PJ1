@@ -1,0 +1,126 @@
+<!--<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاسبه اختلاف زمان</title>
+</head>
+<body>
+    <h1>محاسبه اختلاف زمان</h1>
+    <label for="time1">زمان اول (HH:MM):</label>
+    <input type="time" id="time1" required>
+    <br><br>
+    <label for="time2">زمان دوم (HH:MM):</label>
+    <input type="time" id="time2" required>
+    <br><br>
+    <button onclick="calculateTimeDifference()">محاسبه اختلاف</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateTimeDifference() {
+            const time1 = document.getElementById('time1').value;
+            const time2 = document.getElementById('time2').value;
+
+            if (!time1 || !time2) {
+                alert("لطفاً هر دو زمان را وارد کنید.");
+                return;
+            }
+
+            // تبدیل زمان‌ها به دقیقه
+            const [h1, m1] = time1.split(':').map(Number);
+            const [h2, m2] = time2.split(':').map(Number);
+
+            const totalMinutes1 = h1 * 60 + m1;
+            const totalMinutes2 = h2 * 60 + m2;
+
+            // محاسبه اختلاف دقیقه‌ها
+            const difference = Math.abs(totalMinutes1 - totalMinutes2);
+
+            // تبدیل اختلاف به ساعت و دقیقه
+            const hoursDiff = Math.floor(difference / 60);
+            const minutesDiff = difference % 60;
+
+            // نمایش نتیجه
+            document.getElementById('result').innerText =hoursDiff+":"+minutesDiff;
+        }
+    </script>
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Example</title>
+</head>
+<body>
+    <label>
+        <input type="checkbox" id="myCheckbox"> ارسال مقدار
+    </label>
+    <button id="sendButton">ارسال</button>
+
+    <script>
+document.getElementById('sendButton').addEventListener('click', function() {
+    var checkbox = document.getElementById('myCheckbox');
+    var valueToSend = checkbox.checked ? 'on1' : 'off1';
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'your-server-endpoint?value=' + valueToSend, true);
+  
+
+    xhr.send();
+});
+
+    </script>
+</body>
+</html>
+-->
+<!--
+<input type="time" id="startTime" required>
+<input type="time" id="endTime" required>
+<button onclick="sendRequest()">Send Request</button>
+<div id="countdownDisplay"></div>
+
+<script>
+    function sendRequest() {
+        const startTimeValue = document.getElementById('startTime').value;
+        const endTimeValue = document.getElementById('endTime').value;
+
+        if (!startTimeValue || !endTimeValue) {
+            alert("Please fill both start and end times.");
+            return;
+        }
+
+        // Extracting hours and minutes from the 24-hour format time inputs
+        const [startHours, startMinutes] = startTimeValue.split(':').map(Number);
+        const [endHours, endMinutes] = endTimeValue.split(':').map(Number);
+
+        // Get current time without leading zeros
+        const now = new Date();
+        const currentHour = now.getHours(); // No leading zero
+        const currentMinute = now.getMinutes(); // No leading zero
+
+        // Send a GET request with current time, start, and end times
+        const xhr = new XMLHttpRequest();
+        const url = `/lock?currentHour=${currentHour}&currentMinute=${currentMinute}&startHour=${startHours}&startMinute=${startMinutes}&endHour=${endHours}&endMinute=${endMinutes}`; // Replace with your URL
+        xhr.open('GET', url, true);
+        
+        
+        xhr.send();
+    }
+</script>-->
+<span id="span">hello</span>
+<input type="button" value="show" onclick="show()">
+<script>
+   
+   function show(){
+    
+document.getElementById("span").innerText="i am farzad";
+   }
+
+</script>
+
+
+

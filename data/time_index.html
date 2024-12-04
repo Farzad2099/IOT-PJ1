@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set time Panel</title>
+    <!--<link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="css/time_style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+   
+</head>
+
+<body class="body_content_light">
+
+    <!--this section most be change-->
+   
+    
+       
+    <main id="main">
+      <form id="time_form" action="/timePageForm" method="GET">
+        <div id="box_header">
+           <p class="label_check">Fan 1 :</p> <input name="Fan1" type="checkbox" id="check1"/>
+            <label class="checkBoxLabel" for="check1"></label>
+
+           <p class="label_check">Fan 2 :</p> <input name="Fan2" type="checkbox" id="check2"/>
+            <label class="checkBoxLabel" for="check2"></label>
+
+           <p class="label_check">Light 1 :</p> <input name="Light2" type="checkbox" id="check3"/>
+            <label class="checkBoxLabel" for="check3"></label>
+
+           <p class="label_check">Light 2 :</p> <input name="Light2" type="checkbox" id="check4"/>
+            <label class="checkBoxLabel" for="check4"></label>
+            
+        </div>
+        <div id="visible_dash"></div>
+        <div id="box_section">
+        <div id="box">
+         <input name="range" id="time_range" type="range" value="0" min="0" max="59" oninput="rangeNumber(this.value)" >
+         <span id="range_value">0</span><h5 id="minute">min</h5>
+        </div>
+        <div id="check_section">
+        <p class="label_check" id="custom_label">Custom  </p> <input type="checkbox" id="check5" value="true" onclick="activeOrDeActiveTimeFilds()" />
+        <label class="checkBoxLabel" for="check5"></label>
+        <div id="visible_dash2"></div>
+    </div>
+    </div>
+        <div id="box_footer">
+            <div id="min_set_time_text"><h1>of time:</h1></div>
+            <div id="max_set_time_text"><h1>to time:</h1></div>
+            <div id="min_set_time">
+
+                <input type="time" class="time_input" id="time1" disabled>
+                
+            </div>
+            <div id="max_set_time">
+                <input type="time" class="time_input" id="time2" disabled>
+            </div>
+        </div>
+        <input type="button" id="save_button" value="Apply" onclick="send()">
+        <input type="button" id="cancel_button" value="Cancel" onclick="cancel()" >
+      </form>
+        
+    </main>
+
+
+</body>
+
+
+
+
+
+</html>
