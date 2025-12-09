@@ -84,4 +84,4 @@ More chaos, more features
 👨‍💻 Author
 
 YOUR NAME
-GitHub: https://github.com/ّFarzad2099
+GitHub: https://github.com/Farzad2099
