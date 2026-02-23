@@ -85,3 +85,5 @@ More chaos, more features
 
 GitHub: https://github.com/Farzad2099
 Telegram: @BinaryHeart
+
+Note: This project was built for learning and experimentation purposes.
