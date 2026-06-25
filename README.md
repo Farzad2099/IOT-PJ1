@@ -24,6 +24,19 @@ A tiny-but-mighty IoT system powered by an ESP32 that controls **lamps, fans, a 
 
 ---
 
+<table>
+  <tr>
+    <td>
+      <img src="Pictures/IOT3.jpg" width="300" height="500">
+    </td>
+    <td>
+      <img src="Pictures/IOT2.jpg" width="300" height="500">
+    </td>
+     <td>
+      <img src="Pictures/IOT1.jpg" width="300" height="500">
+    </td>
+  </tr>
+</table>
 ## 🛠 Tech Stack
 - ESP32 (Access Point mode)  
 - Arduino C++  
